@@ -7,11 +7,6 @@ import net.fabric.aiottools.AiotTools.MOD_ID
 import net.fabricmc.yarn.constants.MiningLevels
 import net.minecraft.advancement.criterion.Criteria
 import net.minecraft.block.*
-import net.minecraft.entity.EquipmentSlot
-import net.minecraft.entity.LivingEntity
-import net.minecraft.entity.attribute.EntityAttribute
-import net.minecraft.entity.attribute.EntityAttributeModifier
-import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.*
 import net.minecraft.registry.RegistryKeys
@@ -47,20 +42,8 @@ class AiotToolItem(
     attackSpeed,
     settings,
 ) {
-    private val attackDamage: Float = attackDamageBonus + material.attackDamage
     private val miningSpeed: Float = material.miningSpeedMultiplier
     private val effectiveBlocks: TagKey<Block> = TagKey.of(RegistryKeys.BLOCK, Identifier(MOD_ID, "aiot_effective"))
-    private val attributeModifiers: ImmutableMultimap<EntityAttribute, EntityAttributeModifier> =
-        ImmutableMultimap.builder<EntityAttribute, EntityAttributeModifier>()
-            .put(EntityAttributes.GENERIC_ATTACK_DAMAGE, EntityAttributeModifier(
-                    "Weapon modifier",
-                    attackDamage.toDouble(),
-                    EntityAttributeModifier.Operation.ADDITION))
-            .put(EntityAttributes.GENERIC_ATTACK_SPEED, EntityAttributeModifier(
-                    "Weapon modifier",
-                    attackSpeed.toDouble(),
-                    EntityAttributeModifier.Operation.ADDITION))
-            .build()
     
     private val TILLING_ACTIONS: MutableMap<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> =
         Maps.newHashMap<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>>(
@@ -128,35 +111,6 @@ class AiotToolItem(
             state.isIn(effectiveBlocks) -> miningSpeed
             else -> 1.0f
         }
-    }
-
-    override fun postHit(stack: ItemStack, target: LivingEntity, attacker: LivingEntity): Boolean {
-        stack.damage<LivingEntity>(
-            2,
-            attacker
-        ) { e: LivingEntity -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND) }
-        return true
-    }
-
-    override fun postMine(
-        stack: ItemStack,
-        world: World,
-        state: BlockState,
-        pos: BlockPos,
-        miner: LivingEntity
-    ): Boolean {
-        if (!world.isClient && state.getHardness(world, pos) != 0.0f) {
-            stack.damage<LivingEntity>(
-                1,
-                miner
-            ) { e: LivingEntity -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND) }
-        }
-
-        return true
-    }
-
-    override fun getAttributeModifiers(slot: EquipmentSlot): Multimap<EntityAttribute, EntityAttributeModifier> {
-        return if (slot == EquipmentSlot.MAINHAND) this.attributeModifiers else super.getAttributeModifiers(slot)
     }
 
     override fun isSuitableFor(state: BlockState): Boolean {
