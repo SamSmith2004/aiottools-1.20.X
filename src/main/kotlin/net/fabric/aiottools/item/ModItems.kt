@@ -8,16 +8,13 @@ import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
-import net.minecraft.util.Rarity
 
 object ModItems {
     val CUSTOM_TOOL: Item = registerItem(
         "custom_tool",
-        AiotToolItem(ModToolMaterial.DIAMOND_AIOT, 5f, 2f,
+        AiotToolItem(ModToolMaterial.DIAMOND_AIOT, 8f, 2f,
             FabricItemSettings())
     )
-
-    //private fun addItemsToIngredientItemGroup(entries: FabricItemGroupEntries) {}
 
     private fun registerItem(name: String, item: Item ): Item {
         return Registry.register(Registries.ITEM, Identifier(MOD_ID, name), item)
@@ -25,6 +22,5 @@ object ModItems {
 
     fun registerModItems() {
         LOGGER.info("Registering Mod Items for: $MOD_ID")
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup)
     }
 }

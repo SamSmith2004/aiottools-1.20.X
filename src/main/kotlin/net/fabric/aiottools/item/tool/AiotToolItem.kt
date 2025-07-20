@@ -41,8 +41,10 @@ class AiotToolItem(
     attackDamageBonus: Float,
     attackSpeed: Float,
     settings: Settings,
-): ToolItem(
+): SwordItem(
     material,
+    attackDamageBonus.toInt(),
+    attackSpeed,
     settings,
 ) {
     private val attackDamage: Float = attackDamageBonus + material.attackDamage

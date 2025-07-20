@@ -1,14 +1,17 @@
 {
-	"required": true,
-	"package": "net.fabric.aiottools.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "net.fabric.aiottools.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ExampleMixin",
+    "enchantment.EfficiencyEnchantmentMixin",
+    "enchantment.MendingEnchantmentMixin",
+    "enchantment.SilkTouchEnchantmentMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }
