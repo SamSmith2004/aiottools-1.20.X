@@ -1,7 +1,6 @@
 package net.fabric.aiottools
 
 import net.fabric.aiottools.datagen.ModBlockTagProvider
-import net.fabric.aiottools.datagen.ModEnchantmentTagProvider
 import net.fabric.aiottools.datagen.ModItemTagProvider
 import net.fabric.aiottools.datagen.ModLootTableProvider
 import net.fabric.aiottools.datagen.ModModelProvider
@@ -17,6 +16,5 @@ object AiotToolsDataGenerator : DataGeneratorEntrypoint {
 		pack.addProvider(::ModLootTableProvider)
 		pack.addProvider(::ModModelProvider)
 		pack.addProvider(::ModRecipeProvider)
-		pack.addProvider(::ModEnchantmentTagProvider)
 	}
 }
