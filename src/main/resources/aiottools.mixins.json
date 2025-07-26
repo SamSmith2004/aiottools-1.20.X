@@ -5,6 +5,7 @@
   "mixins": [
     "ExampleMixin",
     "enchantment.EfficiencyEnchantmentMixin",
+    "enchantment.EnchantmentTargetMixin",
     "enchantment.MendingEnchantmentMixin",
     "enchantment.SilkTouchEnchantmentMixin"
   ],
