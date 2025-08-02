@@ -1,0 +1,87 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_hoe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aiottools:iron_aiot_from_iron_tools"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_pickaxe",
+      "has_iron_axe",
+      "has_iron_shovel",
+      "has_iron_sword",
+      "has_iron_hoe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aiottools:iron_aiot_from_iron_tools"
+    ]
+  },
+  "sends_telemetry_event": false
+}

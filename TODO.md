@@ -2,7 +2,7 @@
 ### Features
 - [X] Add CustomToolItem
 - [X] Add Material Item variants
-- [ ] Recipes
+- [X] Recipes
 - [X] Add material specific properties
 - [ ] Add custom material variants API **[MAYBE]**
 
