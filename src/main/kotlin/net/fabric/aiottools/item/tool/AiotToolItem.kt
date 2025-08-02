@@ -4,6 +4,7 @@ package net.fabric.aiottools.item.tool
 import com.google.common.collect.*
 import com.mojang.datafixers.util.Pair
 import net.fabric.aiottools.AiotTools.MOD_ID
+import net.fabric.aiottools.item.ModToolMaterial
 import net.fabricmc.yarn.constants.MiningLevels
 import net.minecraft.advancement.criterion.Criteria
 import net.minecraft.block.*
@@ -30,6 +31,9 @@ import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.block.Blocks
 import net.minecraft.block.CampfireBlock
+import net.minecraft.entity.Entity
+import net.minecraft.entity.effect.StatusEffectInstance
+import net.minecraft.entity.effect.StatusEffects
 
 class AiotToolItem(
     material: ToolMaterial,
@@ -103,6 +107,33 @@ class AiotToolItem(
         Blocks.MYCELIUM to Blocks.DIRT_PATH.defaultState,
         Blocks.ROOTED_DIRT to Blocks.DIRT_PATH.defaultState
     )
+
+    private val MATERIAL_TO_EFFECT_MAP: Map<ToolMaterial, StatusEffectInstance> = mapOf(
+        ModToolMaterial.NETHERITE_AIOT to StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 1),
+        ModToolMaterial.DIAMOND_AIOT to StatusEffectInstance(StatusEffects.HASTE, 100, 1),
+        ModToolMaterial.GOLD_AIOT to StatusEffectInstance(StatusEffects.LUCK, 100, 1)
+    )
+
+    private fun evaluateToolEffects(player: PlayerEntity) {
+        val mainHandItem = player.mainHandStack.item
+        if (mainHandItem !is AiotToolItem) return
+
+        val material = mainHandItem.material
+        if (MATERIAL_TO_EFFECT_MAP.containsKey(material)) {
+            val effect = MATERIAL_TO_EFFECT_MAP[material]
+            if (effect != null && !player.hasStatusEffect(effect.effectType)) {
+                player.addStatusEffect(StatusEffectInstance(effect))
+            }
+        }
+    }
+
+    override fun inventoryTick(stack: ItemStack, world: World, entity: Entity, slot: Int, selected: Boolean) {
+        if(!world.isClient) {
+            if (entity is PlayerEntity) {
+                evaluateToolEffects(entity)
+            }
+        }
+    }
 
     override fun getMiningSpeedMultiplier(stack: ItemStack, state: BlockState): Float {
         return when {

@@ -12,6 +12,14 @@ enum class ModToolMaterial(
     private val enchantability: Int,
     private val repairIngredient: Ingredient = Ingredient.EMPTY
 ) : ToolMaterial {
+    NETHERITE_AIOT(
+        durability = 2000,
+        miningSpeedMultiplier = 10.0f,
+        attackDamage = 5.0f,
+        miningLevel = 5,
+        enchantability = 26,
+        repairIngredient = Ingredient.ofItems(Items.NETHERITE_INGOT),
+    ),
     DIAMOND_AIOT(
         durability = 2000,
         miningSpeedMultiplier = 10.0f,
@@ -19,6 +27,22 @@ enum class ModToolMaterial(
         miningLevel = 5,
         enchantability = 26,
         repairIngredient = Ingredient.ofItems(Items.DIAMOND),
+    ),
+    GOLD_AIOT(
+        durability = 2000,
+        miningSpeedMultiplier = 10.0f,
+        attackDamage = 5.0f,
+        miningLevel = 5,
+        enchantability = 26,
+        repairIngredient = Ingredient.ofItems(Items.GOLD_INGOT),
+    ),
+    IRON_AIOT(
+        durability = 2000,
+        miningSpeedMultiplier = 10.0f,
+        attackDamage = 5.0f,
+        miningLevel = 5,
+        enchantability = 26,
+        repairIngredient = Ingredient.ofItems(Items.IRON_INGOT),
     );
 
     override fun getDurability() = durability

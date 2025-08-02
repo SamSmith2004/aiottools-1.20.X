@@ -1,9 +1,9 @@
 # TODO
 ### Features
 - [X] Add CustomToolItem
-- [ ] Add Material Item variants
+- [X] Add Material Item variants
 - [ ] Recipes
-- [ ] Add material specific properties
+- [X] Add material specific properties
 - [ ] Add custom material variants API **[MAYBE]**
 
 ### Bugs

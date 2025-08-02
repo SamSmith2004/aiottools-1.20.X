@@ -1,5 +1,8 @@
 {
-  "item.aiottools.custom_tool": "CUSTOM Tool",
+  "item.aiottools.netherite_aiot": "Netherite AIOT",
+  "item.aiottools.diamond_aiot": "Diamond AIOT",
+  "item.aiottools.gold_aiot": "Gold AIOT",
+  "item.aiottools.iron_aiot": "Iron AIOT",
 
   "itemgroup.aiot_tools": "AIOT Tools"
 }

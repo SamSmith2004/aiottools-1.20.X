@@ -10,9 +10,24 @@ import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 
 object ModItems {
-    val CUSTOM_TOOL: Item = registerItem(
-        "custom_tool",
+    val NETHERITE_AIOT: Item = registerItem(
+        "netherite_aiot",
+        AiotToolItem(ModToolMaterial.NETHERITE_AIOT, 8f, 2f,
+            FabricItemSettings())
+    )
+    val DIAMOND_AIOT: Item = registerItem(
+        "diamond_aiot",
         AiotToolItem(ModToolMaterial.DIAMOND_AIOT, 8f, 2f,
+            FabricItemSettings())
+    )
+    val GOLD_AIOT: Item = registerItem(
+        "gold_aiot",
+        AiotToolItem(ModToolMaterial.GOLD_AIOT, 8f, 2f,
+            FabricItemSettings())
+    )
+    val IRON_AIOT: Item = registerItem(
+        "iron_aiot",
+        AiotToolItem(ModToolMaterial.IRON_AIOT, 8f, 2f,
             FabricItemSettings())
     )
 

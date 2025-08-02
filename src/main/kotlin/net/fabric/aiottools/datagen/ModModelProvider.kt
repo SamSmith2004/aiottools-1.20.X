@@ -11,6 +11,9 @@ class ModModelProvider(output: FabricDataOutput): FabricModelProvider(output) {
     override fun generateBlockStateModels(blockStateModelGenerator: BlockStateModelGenerator) {}
 
     override fun generateItemModels(itemModelGenerator: ItemModelGenerator) {
-        itemModelGenerator.register(ModItems.CUSTOM_TOOL, Models.HANDHELD)
+        itemModelGenerator.register(ModItems.NETHERITE_AIOT, Models.HANDHELD)
+        itemModelGenerator.register(ModItems.DIAMOND_AIOT, Models.HANDHELD)
+        itemModelGenerator.register(ModItems.GOLD_AIOT, Models.HANDHELD)
+        itemModelGenerator.register(ModItems.IRON_AIOT, Models.HANDHELD)
     }
 }

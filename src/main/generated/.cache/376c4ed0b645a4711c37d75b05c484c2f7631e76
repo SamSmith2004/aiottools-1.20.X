@@ -1,7 +1,6 @@
-// 1.20.1	2025-07-26T14:03:30.40855865	AiotTools/Tags for minecraft:item
-3cc128a3acb88f7317ff1ef88c95142f41ca44fe data/minecraft/tags/items/axes.json
-3cc128a3acb88f7317ff1ef88c95142f41ca44fe data/minecraft/tags/items/pickaxes.json
-384d89e829020ee515d5ab923b1909a12b8a2359 data/aiottools/tags/items/aiot_tool.json
-3cc128a3acb88f7317ff1ef88c95142f41ca44fe data/minecraft/tags/items/swords.json
-3cc128a3acb88f7317ff1ef88c95142f41ca44fe data/minecraft/tags/items/hoes.json
-3cc128a3acb88f7317ff1ef88c95142f41ca44fe data/minecraft/tags/items/shovels.json
+// 1.20.1	2025-08-02T15:23:24.441037569	AiotTools/Tags for minecraft:item
+888e05e38073418cbe40b5ab7673430cc68b608d data/minecraft/tags/items/axes.json
+888e05e38073418cbe40b5ab7673430cc68b608d data/minecraft/tags/items/pickaxes.json
+888e05e38073418cbe40b5ab7673430cc68b608d data/minecraft/tags/items/swords.json
+888e05e38073418cbe40b5ab7673430cc68b608d data/minecraft/tags/items/hoes.json
+888e05e38073418cbe40b5ab7673430cc68b608d data/minecraft/tags/items/shovels.json

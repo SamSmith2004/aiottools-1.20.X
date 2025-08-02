@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "aiottools:custom_tool"
+    "aiottools:netherite_aiot",
+    "aiottools:diamond_aiot",
+    "aiottools:gold_aiot",
+    "aiottools:iron_aiot"
   ]
 }

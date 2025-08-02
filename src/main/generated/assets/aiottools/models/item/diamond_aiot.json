@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "aiottools:item/custom_tool"
+    "layer0": "aiottools:item/diamond_aiot"
   }
 }

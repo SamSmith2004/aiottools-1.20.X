@@ -20,7 +20,10 @@ object ModItemGroups {
             .displayName(Text.translatable("itemgroup.aiot_tools"))
             .icon { ItemStack(Items.NETHERITE_PICKAXE) }
             .entries { displayContext, entries ->
-                entries.add(ModItems.CUSTOM_TOOL)
+                entries.add(ModItems.NETHERITE_AIOT)
+                entries.add(ModItems.DIAMOND_AIOT)
+                entries.add(ModItems.GOLD_AIOT)
+                entries.add(ModItems.IRON_AIOT)
             }
             .build()
     )
