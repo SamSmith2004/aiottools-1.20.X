@@ -6,26 +6,20 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
 import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder
 import net.minecraft.item.Items
+import net.minecraft.recipe.Ingredient
 import net.minecraft.recipe.book.RecipeCategory
 import net.minecraft.util.Identifier
 import java.util.function.Consumer
 
 class ModRecipeProvider(output: FabricDataOutput): FabricRecipeProvider(output) {
     override fun generate(exporter: Consumer<RecipeJsonProvider>) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.NETHERITE_AIOT, 1)
-            .input(Items.NETHERITE_AXE)
-            .input(Items.NETHERITE_PICKAXE)
-            .input(Items.NETHERITE_SHOVEL)
-            .input(Items.NETHERITE_SWORD)
-            .input(Items.NETHERITE_HOE)
-            .criterion("has_netherite_pickaxe", conditionsFromItem(Items.NETHERITE_PICKAXE))
-            .criterion("has_netherite_axe", conditionsFromItem(Items.NETHERITE_AXE))
-            .criterion("has_netherite_shovel", conditionsFromItem(Items.NETHERITE_SHOVEL))
-            .criterion("has_netherite_sword", conditionsFromItem(Items.NETHERITE_SWORD))
-            .criterion("has_netherite_hoe", conditionsFromItem(Items.NETHERITE_HOE))
-            .offerTo(exporter, Identifier(MOD_ID, "netherite_aiot_from_netherite_tools"))
+        registerCraftingRecipes(exporter)
+        registerSmithingRecipes(exporter)
+    }
 
+    private fun registerCraftingRecipes(exporter: Consumer<RecipeJsonProvider>) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_AIOT, 1)
             .input(Items.DIAMOND_AXE)
             .input(Items.DIAMOND_PICKAXE)
@@ -64,5 +58,17 @@ class ModRecipeProvider(output: FabricDataOutput): FabricRecipeProvider(output) 
             .criterion("has_iron_sword", conditionsFromItem(Items.IRON_SWORD))
             .criterion("has_iron_hoe", conditionsFromItem(Items.IRON_HOE))
             .offerTo(exporter, Identifier(MOD_ID, "iron_aiot_from_iron_tools"))
+    }
+
+    private fun registerSmithingRecipes(exporter: Consumer<RecipeJsonProvider>) {
+        SmithingTransformRecipeJsonBuilder.create(
+            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+            Ingredient.ofItems(ModItems.DIAMOND_AIOT),
+            Ingredient.ofItems(Items.NETHERITE_INGOT),
+            RecipeCategory.TOOLS,
+            ModItems.NETHERITE_AIOT
+        )
+            .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
+            .offerTo(exporter, Identifier(MOD_ID, "netherite_aiot_smithing"))
     }
 }

@@ -3,8 +3,8 @@
   "package": "net.fabric.aiottools.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ExampleMixin",
     "enchantment.EfficiencyEnchantmentMixin",
+    "enchantment.EnchantmentMixin",
     "enchantment.EnchantmentTargetMixin",
     "enchantment.MendingEnchantmentMixin",
     "enchantment.SilkTouchEnchantmentMixin"

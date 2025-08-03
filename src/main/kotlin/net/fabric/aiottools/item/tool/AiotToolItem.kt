@@ -37,13 +37,11 @@ import net.minecraft.entity.effect.StatusEffects
 
 class AiotToolItem(
     material: ToolMaterial,
-    attackDamageBonus: Float,
-    attackSpeed: Float,
     settings: Settings,
 ): SwordItem(
     material,
-    attackDamageBonus.toInt(),
-    attackSpeed,
+    -1,
+    -2.0f,
     settings,
 ) {
     private val miningSpeed: Float = material.miningSpeedMultiplier

@@ -2,12 +2,15 @@
 ### Features
 - [X] Add CustomToolItem
 - [X] Add Material Item variants
-- [X] Recipes
+- [X] Crafting Recipes
+- [X] Smithing Recipes
 - [X] Add material specific properties
 - [ ] Add custom material variants API **[MAYBE]**
 
 ### Bugs
-- [ ] Fix enchants mot showing in enchanting table
+- [ ] Fix enchants not showing in enchanting table
 
 ### Misc
 - [ ] Translations
+- [ ] Investigate enchant mixin simplification
+- [X] Balance tool stats
