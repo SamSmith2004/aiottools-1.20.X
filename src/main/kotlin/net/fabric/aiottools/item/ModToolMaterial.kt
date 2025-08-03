@@ -31,7 +31,7 @@ enum class ModToolMaterial(
     GOLD_AIOT(
         durability = 333,
         miningSpeedMultiplier = 20.0f,
-        attackDamage = 15.0f,
+        attackDamage = 6.0f,
         miningLevel = 3,
         enchantability = 26,
         repairIngredient = Ingredient.ofItems(Items.GOLD_INGOT),

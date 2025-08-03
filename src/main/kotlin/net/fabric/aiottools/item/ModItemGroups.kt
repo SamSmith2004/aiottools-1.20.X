@@ -5,7 +5,6 @@ import net.fabric.aiottools.AiotTools.MOD_ID
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.text.Text
@@ -18,7 +17,7 @@ object ModItemGroups {
         Identifier(MOD_ID, "aiot_tools"),
         FabricItemGroup.builder()
             .displayName(Text.translatable("itemgroup.aiot_tools"))
-            .icon { ItemStack(Items.NETHERITE_PICKAXE) }
+            .icon { ItemStack(ModItems.NETHERITE_AIOT) }
             .entries { displayContext, entries ->
                 entries.add(ModItems.NETHERITE_AIOT)
                 entries.add(ModItems.DIAMOND_AIOT)
