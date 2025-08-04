@@ -1,0 +1,9 @@
+{
+  "item.aiottools.netherite_aiot": "下界合金 AIOT",
+  "item.aiottools.diamond_aiot": "钻石 AIOT",
+  "item.aiottools.gold_aiot": "金子 AIOT",
+  "item.aiottools.iron_aiot": "铁 AIOT",
+  "item.aiottools.obsidian_aiot": "黑曜石 AIOT",
+
+  "itemgroup.aiot_tools": "多合一工具"
+}

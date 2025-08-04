@@ -108,8 +108,9 @@ class AiotToolItem(
 
     private val MATERIAL_TO_EFFECT_MAP: Map<ToolMaterial, StatusEffectInstance> = mapOf(
         ModToolMaterial.NETHERITE_AIOT to StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 1),
-        ModToolMaterial.DIAMOND_AIOT to StatusEffectInstance(StatusEffects.HASTE, 100, 1),
-        ModToolMaterial.GOLD_AIOT to StatusEffectInstance(StatusEffects.LUCK, 100, 1)
+        ModToolMaterial.DIAMOND_AIOT to StatusEffectInstance(StatusEffects.SATURATION, 100, 1),
+        ModToolMaterial.GOLD_AIOT to StatusEffectInstance(StatusEffects.LUCK, 100, 1),
+        ModToolMaterial.OBSIDIAN_AIOT to StatusEffectInstance(StatusEffects.RESISTANCE, 100, 1),
     )
 
     private fun evaluateToolEffects(player: PlayerEntity) {

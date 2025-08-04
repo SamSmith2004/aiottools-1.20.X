@@ -12,6 +12,5 @@
 - [ ] Fix enchants not showing in enchanting table
 
 ### Misc
-- [ ] Translations
-- [ ] Investigate enchant mixin simplification
+- [X] Translations
 - [X] Balance tool stats

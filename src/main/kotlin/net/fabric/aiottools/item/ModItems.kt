@@ -13,7 +13,7 @@ object ModItems {
     val NETHERITE_AIOT: Item = registerItem(
         "netherite_aiot",
         AiotToolItem(ModToolMaterial.NETHERITE_AIOT,
-            FabricItemSettings())
+            FabricItemSettings().fireproof())
     )
     val DIAMOND_AIOT: Item = registerItem(
         "diamond_aiot",
@@ -33,7 +33,7 @@ object ModItems {
     val OBSIDIAN_AIOT: Item = registerItem(
         "obsidian_aiot",
         AiotToolItem(ModToolMaterial.OBSIDIAN_AIOT,
-            FabricItemSettings())
+            FabricItemSettings().fireproof())
     )
 
     private fun registerItem(name: String, item: Item ): Item {

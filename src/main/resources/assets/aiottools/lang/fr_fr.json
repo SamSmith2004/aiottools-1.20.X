@@ -1,0 +1,9 @@
+{
+  "item.aiottools.netherite_aiot": "Netherite AIOT",
+  "item.aiottools.diamond_aiot": "Diamant AIOT",
+  "item.aiottools.gold_aiot": "Or AIOT",
+  "item.aiottools.iron_aiot": "Fer AIOT",
+  "item.aiottools.obsidian_aiot": "Obsidienne AIOT",
+
+  "itemgroup.aiot_tools": "Outils tout-en-un"
+}
