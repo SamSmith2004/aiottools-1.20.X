@@ -23,6 +23,7 @@ object ModItemGroups {
                 entries.add(ModItems.DIAMOND_AIOT)
                 entries.add(ModItems.GOLD_AIOT)
                 entries.add(ModItems.IRON_AIOT)
+                entries.add(ModItems.OBSIDIAN_AIOT)
             }
             .build()
     )

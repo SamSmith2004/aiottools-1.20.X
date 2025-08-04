@@ -30,6 +30,11 @@ object ModItems {
         AiotToolItem(ModToolMaterial.IRON_AIOT,
             FabricItemSettings())
     )
+    val OBSIDIAN_AIOT: Item = registerItem(
+        "obsidian_aiot",
+        AiotToolItem(ModToolMaterial.OBSIDIAN_AIOT,
+            FabricItemSettings())
+    )
 
     private fun registerItem(name: String, item: Item ): Item {
         return Registry.register(Registries.ITEM, Identifier(MOD_ID, name), item)

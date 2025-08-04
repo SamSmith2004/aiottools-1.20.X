@@ -70,5 +70,15 @@ class ModRecipeProvider(output: FabricDataOutput): FabricRecipeProvider(output) 
         )
             .criterion("has_netherite_ingot", conditionsFromItem(Items.NETHERITE_INGOT))
             .offerTo(exporter, Identifier(MOD_ID, "netherite_aiot_smithing"))
+
+        SmithingTransformRecipeJsonBuilder.create(
+            Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+            Ingredient.ofItems(ModItems.DIAMOND_AIOT),
+            Ingredient.ofItems(Items.OBSIDIAN),
+            RecipeCategory.TOOLS,
+            ModItems.OBSIDIAN_AIOT
+        )
+            .criterion("has_obsidian_ingot", conditionsFromItem(Items.OBSIDIAN))
+            .offerTo(exporter, Identifier(MOD_ID, "obsidian_aiot_smithing"))
     }
 }

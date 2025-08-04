@@ -17,31 +17,36 @@ class ModItemTagProvider(
             ModItems.NETHERITE_AIOT,
             ModItems.DIAMOND_AIOT,
             ModItems.GOLD_AIOT,
-            ModItems.IRON_AIOT
+            ModItems.IRON_AIOT,
+            ModItems.OBSIDIAN_AIOT
         )
         getOrCreateTagBuilder(ItemTags.AXES).add(
             ModItems.NETHERITE_AIOT,
             ModItems.DIAMOND_AIOT,
             ModItems.GOLD_AIOT,
-            ModItems.IRON_AIOT
+            ModItems.IRON_AIOT,
+            ModItems.OBSIDIAN_AIOT
         )
         getOrCreateTagBuilder(ItemTags.PICKAXES).add(
             ModItems.NETHERITE_AIOT,
             ModItems.DIAMOND_AIOT,
             ModItems.GOLD_AIOT,
-            ModItems.IRON_AIOT
+            ModItems.IRON_AIOT,
+            ModItems.OBSIDIAN_AIOT
         )
         getOrCreateTagBuilder(ItemTags.SHOVELS).add(
             ModItems.NETHERITE_AIOT,
             ModItems.DIAMOND_AIOT,
             ModItems.GOLD_AIOT,
-            ModItems.IRON_AIOT
+            ModItems.IRON_AIOT,
+            ModItems.OBSIDIAN_AIOT
         )
         getOrCreateTagBuilder(ItemTags.HOES).add(
             ModItems.NETHERITE_AIOT,
             ModItems.DIAMOND_AIOT,
             ModItems.GOLD_AIOT,
-            ModItems.IRON_AIOT
+            ModItems.IRON_AIOT,
+            ModItems.OBSIDIAN_AIOT
         )
     }
 }

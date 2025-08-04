@@ -14,7 +14,7 @@ enum class ModToolMaterial(
 ) : ToolMaterial {
     NETHERITE_AIOT(
         durability = 2250,
-        miningSpeedMultiplier = 12.0f,
+        miningSpeedMultiplier = 13.0f,
         attackDamage = 15.0f,
         miningLevel = 5,
         enchantability = 30,
@@ -43,6 +43,14 @@ enum class ModToolMaterial(
         miningLevel = 2,
         enchantability = 15,
         repairIngredient = Ingredient.ofItems(Items.IRON_INGOT),
+    ),
+    OBSIDIAN_AIOT(
+        durability = 5000,
+        miningSpeedMultiplier = 11.0f,
+        attackDamage = 10.0f,
+        miningLevel = 5,
+        enchantability = 30,
+        repairIngredient = Ingredient.ofItems(Items.OBSIDIAN),
     );
 
     override fun getDurability() = durability

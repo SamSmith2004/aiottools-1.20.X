@@ -1,9 +1,11 @@
-// 1.20.1	2025-08-03T13:14:00.018970201	AiotTools/Recipes
+// 1.20.1	2025-08-04T13:47:12.651208553	AiotTools/Recipes
 bc3b26c2eb9753dc762eaa7a375e2c3a964eeb15 data/aiottools/recipes/diamond_aiot_from_diamond_tools.json
 e86830a6a2b795af7fcfadf302b4457c470bbc02 data/aiottools/recipes/netherite_aiot_smithing.json
 a7bf761c397d5b95cb7b588deea50c9f3d2cab4b data/aiottools/advancements/recipes/tools/netherite_aiot_smithing.json
+4a634842cbac35075264506bd0847403d80e9e83 data/aiottools/recipes/obsidian_aiot_smithing.json
 a4e7a7d0d7f5f6aeb54fa2428b08db657cc6caf6 data/aiottools/advancements/recipes/tools/golden_aiot_from_golden_tools.json
 1c117889a13095a3f450441b38b75c499ca31b67 data/aiottools/recipes/golden_aiot_from_golden_tools.json
 d4fd4e8a114fccfd0870fa1a0740bdcd193ffb7f data/aiottools/advancements/recipes/tools/iron_aiot_from_iron_tools.json
 5d6899c41b141dbe8402ddffa142d3b2957ba5ee data/aiottools/advancements/recipes/tools/diamond_aiot_from_diamond_tools.json
+52a03e3fef973f191c9ef0fa794020f6da40a883 data/aiottools/advancements/recipes/tools/obsidian_aiot_smithing.json
 2c45e48bc677a7d319865182ebe46b369a801bd3 data/aiottools/recipes/iron_aiot_from_iron_tools.json

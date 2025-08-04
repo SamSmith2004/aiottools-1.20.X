@@ -15,5 +15,6 @@ class ModModelProvider(output: FabricDataOutput): FabricModelProvider(output) {
         itemModelGenerator.register(ModItems.DIAMOND_AIOT, Models.HANDHELD)
         itemModelGenerator.register(ModItems.GOLD_AIOT, Models.HANDHELD)
         itemModelGenerator.register(ModItems.IRON_AIOT, Models.HANDHELD)
+        itemModelGenerator.register(ModItems.OBSIDIAN_AIOT, Models.HANDHELD)
     }
 }
